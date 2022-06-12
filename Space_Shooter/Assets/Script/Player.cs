@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private Rigidbody2D meuRB;
+    private Rigidbody2D meurB;
     // Start is called before the first frame update
     void Start()
     {
-        meuRB = GetComponent<Rigidbody2D>();
+        meurB = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
