@@ -24,8 +24,10 @@ public class Player : MonoBehaviour
         //pegando o input horizontal
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        Vector2 minhavelocidade = new Vector2(horizontal, vertical) * velocidade;
+        Vector2 minhavelocidade = new Vector2(horizontal, vertical);
+        //normalizando
+        minhavelocidade.Normalize();
         //passando a minha velocidade para o meu RB
-        meurB.velocity = minhavelocidade;
+        meurB.velocity = minhavelocidade * velocidade;
     }
 }
